@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
     <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="script.js"></script>
     <title>Medico</title>
 </head>
 <body>
@@ -14,8 +16,9 @@
         <!-- Navbar -->
         <header>
 
-            <div class="logo-container">
-            </div>
+            <a href="/" class="logo-container">
+                <img src="./assets/logo.png" alt="logo">
+            </a>
 
             <!-- Nav links -->
             <nav>
@@ -26,6 +29,13 @@
                     <li> <a href="#hero">Testimonials</a> </li>
                 </ul>
             </nav>
+            <label class="hamburger">
+                <input type="checkbox">
+                <svg viewBox="0 0 32 32" id="menu-btn">
+                  <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                  <path class="line" d="M7 16 27 16"></path>
+                </svg>
+              </label>
         </header>
 
     </section>
@@ -37,22 +47,88 @@
 
     <!-- Photo Section -->
     <section class="photo-sec" id="photo-sec">
-
+        <main class="center">
+            <img src="./assets/photos.png" alt="photo" class="ph1">
+        </main>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
+    <!-- <section class="testimonials" id="testimonials">
 
-    </section>
+    </section> -->
 
     <!-- Youtube videos -->
-    <section class="yt-videos">
+    <section class="yt-videos center">
+        <h2 class="sub-heading">
+            Youtube Videos
+        </h2>
+
+        <div class="video-grid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1RJ5Q09PqM?si=FaqFm-U4T5eTlRMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1RJ5Q09PqM?si=FaqFm-U4T5eTlRMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1RJ5Q09PqM?si=FaqFm-U4T5eTlRMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1RJ5Q09PqM?si=FaqFm-U4T5eTlRMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1RJ5Q09PqM?si=FaqFm-U4T5eTlRMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1RJ5Q09PqM?si=FaqFm-U4T5eTlRMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
     </section>
 
     <!-- Footer -->
     <footer>
+        <main>
+            <a href="/">
+                <img src="./assets/logotext.svg" alt="logo" class="footer-logo">
+            </a>
+            <div class="footer-contents center">
 
+                <div class="follow-us column center">
+                    <h2>Follow us on</h2>
+                    <div class="social-media-icons center">
+                        <a href="">
+                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 15.0838C0.5 22.5413 5.91625 28.7425 13 30V19.1663H9.25V15H13V11.6663C13 7.91625 15.4163 5.83375 18.8337 5.83375C19.9163 5.83375 21.0837 6 22.1663 6.16625V10H20.25C18.4163 10 18 10.9163 18 12.0837V15H22L21.3337 19.1663H18V30C25.0837 28.7425 30.5 22.5425 30.5 15.0838C30.5 6.7875 23.75 0 15.5 0C7.25 0 0.5 6.7875 0.5 15.0838Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.785 2.5C18.1912 2.50375 18.905 2.51125 19.5212 2.52875L19.7637 2.5375C20.0437 2.5475 20.32 2.56 20.6537 2.575C21.9837 2.6375 22.8912 2.8475 23.6875 3.15625C24.5125 3.47375 25.2075 3.90375 25.9025 4.5975C26.5381 5.22237 27.0299 5.97824 27.3437 6.8125C27.6525 7.60875 27.8625 8.51625 27.925 9.8475C27.94 10.18 27.9525 10.4563 27.9625 10.7375L27.97 10.98C27.9887 11.595 27.9962 12.3088 27.9987 13.715L28 14.6475V16.285C28.0031 17.1968 27.9935 18.1085 27.9712 19.02L27.9637 19.2625C27.9537 19.5437 27.9412 19.82 27.9262 20.1525C27.8637 21.4837 27.6512 22.39 27.3437 23.1875C27.0308 24.0222 26.5389 24.7783 25.9025 25.4025C25.2774 26.0379 24.5216 26.5297 23.6875 26.8438C22.8912 27.1525 21.9837 27.3625 20.6537 27.425C20.3571 27.439 20.0605 27.4515 19.7637 27.4625L19.5212 27.47C18.905 27.4875 18.1912 27.4963 16.785 27.4988L15.8525 27.5H14.2162C13.3041 27.5031 12.3919 27.4936 11.48 27.4712L11.2375 27.4638C10.9408 27.4525 10.6441 27.4396 10.3475 27.425C9.01749 27.3625 8.10999 27.1525 7.31249 26.8438C6.47833 26.5305 5.72276 26.0386 5.09874 25.4025C4.46255 24.7779 3.97027 24.0219 3.65624 23.1875C3.34749 22.3912 3.13749 21.4837 3.07499 20.1525C3.06106 19.8559 3.04856 19.5592 3.03749 19.2625L3.03124 19.02C3.0082 18.1085 2.99779 17.1968 2.99999 16.285V13.715C2.9965 12.8033 3.00567 11.8915 3.02749 10.98L3.03624 10.7375C3.04624 10.4563 3.05874 10.18 3.07374 9.8475C3.13624 8.51625 3.34624 7.61 3.65499 6.8125C3.96888 5.97738 4.46214 5.22128 5.09999 4.5975C5.72385 3.96184 6.47892 3.46998 7.31249 3.15625C8.10999 2.8475 9.01624 2.6375 10.3475 2.575C10.68 2.56 10.9575 2.5475 11.2375 2.5375L11.48 2.53C12.3915 2.50779 13.3032 2.49821 14.215 2.50125L16.785 2.5ZM15.5 8.75C13.8424 8.75 12.2527 9.40848 11.0806 10.5806C9.90847 11.7527 9.24999 13.3424 9.24999 15C9.24999 16.6576 9.90847 18.2473 11.0806 19.4194C12.2527 20.5915 13.8424 21.25 15.5 21.25C17.1576 21.25 18.7473 20.5915 19.9194 19.4194C21.0915 18.2473 21.75 16.6576 21.75 15C21.75 13.3424 21.0915 11.7527 19.9194 10.5806C18.7473 9.40848 17.1576 8.75 15.5 8.75ZM15.5 11.25C15.9924 11.2499 16.4801 11.3468 16.9351 11.5352C17.3901 11.7236 17.8035 11.9997 18.1518 12.3479C18.5001 12.6961 18.7764 13.1094 18.9649 13.5644C19.1535 14.0193 19.2505 14.5069 19.2506 14.9994C19.2507 15.4918 19.1538 15.9795 18.9654 16.4345C18.777 16.8895 18.5009 17.3029 18.1527 17.6512C17.8045 17.9995 17.3912 18.2758 16.9363 18.4643C16.4813 18.6528 15.9937 18.7499 15.5012 18.75C14.5067 18.75 13.5528 18.3549 12.8496 17.6517C12.1463 16.9484 11.7512 15.9946 11.7512 15C11.7512 14.0054 12.1463 13.0516 12.8496 12.3483C13.5528 11.6451 14.5067 11.25 15.5012 11.25M22.0637 6.875C21.6493 6.875 21.2519 7.03962 20.9589 7.33265C20.6659 7.62567 20.5012 8.0231 20.5012 8.4375C20.5012 8.8519 20.6659 9.24933 20.9589 9.54235C21.2519 9.83538 21.6493 10 22.0637 10C22.4781 10 22.8756 9.83538 23.1686 9.54235C23.4616 9.24933 23.6262 8.8519 23.6262 8.4375C23.6262 8.0231 23.4616 7.62567 23.1686 7.33265C22.8756 7.03962 22.4781 6.875 22.0637 6.875Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_53_21)">
+                                <path d="M18.2928 12.7031L29.2208 0H26.6309L17.1425 11.0297L9.56376 0H0.82251L12.283 16.6791L0.82251 30H3.41235L13.4328 18.3523L21.4363 30H30.1775L18.2921 12.7031H18.2928ZM14.7458 16.8258L13.5845 15.165L4.3454 1.94953H8.32321L15.7789 12.615L16.94 14.2758L26.6321 28.1391H22.6548L14.7458 16.8265V16.8258Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_53_21">
+                                <rect width="30" height="30" fill="white" transform="translate(0.5)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>    
+                        </a>                            
+                    </div>                        
+                </div>
+
+                <div class="address column center">
+                    <h2>Office Address</h2>
+                    <p class="center">
+                        <span>Thiruvankulam</span>
+                        <span>Kochi</span>
+                        <span>Kerala</span>
+                    </p>
+                </div>
+
+                <div class="contact column center">
+                    <h2>Contact</h2>
+                    <p class="center">
+                        <span>Email ID: medico@gmail.com</span>
+                        <span>Phone No: +91 9232342342</span>
+                    </p>
+                </div>
+
+            </div>
+        </main>
     </footer>
 </body>
 </html>
