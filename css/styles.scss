@@ -10,6 +10,7 @@
 
 // Colors
 $bg-color: #161513;
+$green: #00ffb6;
 
 
 body{
@@ -40,10 +41,7 @@ body{
     font-size: 2.2rem;
     font-style: normal;
     font-weight: 600;
-    background: linear-gradient(106deg, #F00 -5.33%, #ADFF00 30%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $green;
 }
 
 footer{
@@ -164,8 +162,70 @@ header{
                     font-size: 1.1rem;
                     text-decoration: none;
                     color: white;
+                    &:hover{
+                        color: $green;
+                    }
                 }
             }
+        }
+    }
+}
+
+.hero{
+    flex-direction: column;
+    main{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        padding: 3em 0;
+        padding-bottom: 2em;
+        gap: 2em;
+        .headings{
+            .title{
+                font-size: 3.7rem;
+                color: $green;
+                text-align: center;
+                font-weight: 700;
+            }
+            .sub-title{
+                font-size: 1.25rem;
+                font-weight: 600;
+                text-align: center;
+                color: white;
+            }
+        }
+
+        .swiper {
+            width: 100%;
+            margin-bottom: 2em;
+            .swiper-pagination-bullet{
+                background-color: white;
+            }
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 0 1em;
+                img{
+                    display: block;
+                    width: 100%;
+                    max-height: 400px;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+        p{
+            color: white;
+            text-align: center;
+            padding: 0 2em;
+            font-size: 14px;
         }
     }
 }
@@ -175,6 +235,7 @@ header{
     gap: 3em;
     padding: 13em 0;
     padding-top: 5em;
+    background-color: black;
     .video-grid{
         display: grid;
         grid-template-columns: auto;

@@ -33,10 +33,7 @@ body section {
   font-size: 2.2rem;
   font-style: normal;
   font-weight: 600;
-  background: linear-gradient(106deg, #F00 -5.33%, #ADFF00 30%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #00ffb6;
 }
 
 footer {
@@ -157,12 +154,73 @@ header nav ul li a {
   text-decoration: none;
   color: white;
 }
+header nav ul li a:hover {
+  color: #00ffb6;
+}
+
+.hero {
+  flex-direction: column;
+}
+.hero main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 3em 0;
+  padding-bottom: 2em;
+  gap: 2em;
+}
+.hero main .headings .title {
+  font-size: 3.7rem;
+  color: #00ffb6;
+  text-align: center;
+  font-weight: 700;
+}
+.hero main .headings .sub-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+.hero main .swiper {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.hero main .swiper .swiper-pagination-bullet {
+  background-color: white;
+}
+.hero main .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 1em;
+}
+.hero main .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero main p {
+  color: white;
+  text-align: center;
+  padding: 0 2em;
+  font-size: 14px;
+}
 
 .yt-videos {
   flex-direction: column;
   gap: 3em;
   padding: 13em 0;
   padding-top: 5em;
+  background-color: black;
 }
 .yt-videos .video-grid {
   display: grid;
