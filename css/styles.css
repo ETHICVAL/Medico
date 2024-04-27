@@ -173,6 +173,16 @@ header nav ul li a:hover {
   color: #00ffb6;
 }
 
+.whatsapp {
+  position: fixed;
+  z-index: 200;
+  bottom: 5em;
+  right: 2em;
+  background-color: #60d669;
+  padding: 1em 1em;
+  border-radius: 20px;
+}
+
 .hero {
   flex-direction: column;
   padding-bottom: 3em;
@@ -189,13 +199,13 @@ header nav ul li a:hover {
   gap: 3em;
 }
 .hero main .headings .title {
-  font-size: 3.7rem;
+  font-size: 4rem;
   color: #00ffb6;
   text-align: center;
   font-weight: 700;
 }
 .hero main .headings .sub-title {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: center;
   color: white;
@@ -228,6 +238,10 @@ header nav ul li a:hover {
   text-align: center;
   padding: 0 2em;
   font-size: 14px;
+}
+.hero main .social {
+  gap: 2em;
+  padding: 2em 0em;
 }
 
 .about {
@@ -301,7 +315,8 @@ header nav ul li a:hover {
 
 @media only screen and (min-width: 1000px) {
   header {
-    padding: 4em 9em;
+    padding: 2em 3em;
+    padding-top: 4em;
   }
   header .hamburger {
     display: none;
@@ -318,26 +333,26 @@ header nav ul li a:hover {
   header nav ul {
     flex-direction: row;
     background-color: transparent;
-    gap: 5em;
+    gap: 3em;
   }
   header nav ul li a {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
   }
   .sub-heading {
     font-size: 4rem;
   }
   .hero main {
-    gap: 1em;
     padding: 0 5em;
-    gap: 2em;
+    gap: 1em;
   }
   .hero main .headings .title {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #00ffb6;
   }
   .hero main .headings .sub-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    transform: translateY(-14px);
   }
   .hero main .swiper {
     width: 70%;
@@ -348,18 +363,25 @@ header nav ul li a:hover {
   .hero main .swiper .swiper-slide img {
     -o-object-position: top;
        object-position: top;
-    height: 500px;
+    height: 450px;
     width: auto;
     margin: 0em 5em;
   }
   .hero main .swiper .swiper-slide video {
     width: 100%;
-    height: 500px;
+    height: 450px;
     margin: 0em 5em;
   }
   .hero main p {
     padding: 0;
     font-size: 1rem;
+  }
+  .hero main .social {
+    flex-direction: column;
+    position: absolute;
+    right: 2em;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .about {
     flex-direction: row;
