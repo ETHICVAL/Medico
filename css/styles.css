@@ -279,6 +279,8 @@ header nav ul li a:hover {
 }
 .yt-videos .video-grid iframe {
   max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 .photo-sec {

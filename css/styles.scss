@@ -291,6 +291,8 @@ header{
         padding: 0 1em;
         iframe{
             max-width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
         }
     }
 }
