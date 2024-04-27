@@ -280,7 +280,7 @@ header{
 .yt-videos{
     flex-direction: column;
     gap: 3em;
-    padding: 13em 0;
+    padding: 5em 0;
     padding-top: 5em;
     .video-grid{
         display: grid;
@@ -410,8 +410,8 @@ header{
         }
     }
     .yt-videos{
-        gap: 10em;
-        padding: 17em 0;
+        gap: 5em;
+        padding: 10em 0;
         .video-grid{
             grid-template-columns: auto auto;
             justify-content: space-evenly;
