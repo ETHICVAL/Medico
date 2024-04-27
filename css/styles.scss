@@ -19,7 +19,15 @@ body{
     scroll-behavior: smooth;
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: $bg-color;
+    gap: 0;
+    .bg-img{
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100vw;
+        z-index: -1;
+    }
 
     &::-webkit-scrollbar{
         display: none;
@@ -27,6 +35,7 @@ body{
     section{
         background-color: $bg-color;
         width: 100vw;
+        z-index: 2;
     }
 }
 
@@ -70,8 +79,14 @@ footer{
                 gap: .7em;
                 .social-media-icons{
                     gap: 1em;
+                    align-self: center;
                 }
-                p{
+                .ad{
+                    flex-direction: column;
+                    border-bottom: 1px solid white;
+                    padding: 1em 0em;
+                }
+                .cnt{
                     flex-direction: column;
                 }
             }
@@ -230,12 +245,42 @@ header{
     }
 }
 
+.about{
+    color: white;
+    padding: 4em 1em;
+    padding-bottom: 0;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3em;
+    .abt-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        p{
+            text-align: center;
+        }
+        .sub-cnt{
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    .speaker{
+        width: auto;
+        height: 400px;
+    }
+}
+
 .yt-videos{
     flex-direction: column;
     gap: 3em;
     padding: 13em 0;
     padding-top: 5em;
-    background-color: black;
     .video-grid{
         display: grid;
         grid-template-columns: auto;
@@ -251,10 +296,15 @@ header{
 }
 
 .photo-sec{
-    padding: 5em 0;
+    height: 200px;
+    background-color: transparent;
+    // backdrop-filter: blur(50px);
+    filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.5);
     main{
         flex-direction: column;
         padding: 0 1em;
+        display: none;
         .ph1{
             flex: 1;
             width: 100%;
@@ -287,7 +337,7 @@ header{
                 gap: 5em;
                 li{
                     a{
-                        font-size: 1.25rem;
+                        font-size: 1.1rem;
                         font-weight: 400;
                     }
                 }
@@ -296,6 +346,67 @@ header{
     }
     .sub-heading{
         font-size: 4rem;
+    }
+
+    .hero{
+        main{
+            gap: 1em;
+            padding: 0 5em;
+            gap: 2em;
+            // background-color: red;
+            .headings{
+                .title{
+                    font-size: 4rem;
+                    color: $green;
+                }
+                .sub-title{
+                    font-size: 2rem;
+                }
+            }
+
+            .swiper{
+                width: 70%;
+                .swiper-slide {
+                    padding: 0em 1em;
+                    img{
+                        object-position: top;
+                        height: 500px;
+                        width: auto;
+                        margin: 0em 5em;
+                    }
+                    video{
+                        width: 100%;
+                        height: 500px;
+                        margin: 0em 5em;
+                    }
+                }
+            }
+            p{
+                padding: 0;
+                font-size: 1rem;
+            }
+        }
+    }
+    .about{
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 5em 5em;
+        padding-bottom: 0;
+        .abt-details{
+            padding-bottom: 5em;
+            .sub-heading{
+                align-self: flex-start;
+            }
+            justify-content: flex-start;
+            p{
+                text-align: left;
+                font-size: 1.2rem;
+            }
+            .sub-cnt{
+                font-size: 1rem;
+            }
+        }
     }
     .yt-videos{
         gap: 10em;
@@ -332,9 +443,55 @@ header{
 
 @media only screen and (min-width: 1300px){
     footer{
-        padding: 5em 10em;
+        padding: 5em 5em;
         main .footer-contents{
-            gap: 5em;
+            gap: 3em;
         }
     }
+    .about{
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 5em 5em;
+        padding-bottom: 0;
+        gap: 5em;
+        .abt-details{
+            height: 600px;
+            padding: 5em 0;
+            justify-content: center;
+            .sub-heading{
+                align-self: flex-start;
+            }
+            justify-content: flex-start;
+            p{
+                text-align: left;
+                font-size: 1.2rem;
+            }
+            .sub-cnt{
+                font-size: 1rem;
+            }
+        }
+        .speaker{
+            height: 600px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    footer main .footer-contents{
+        .address{
+            .addresses{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 1.5em;
+                .ad{
+                    border: none;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
 }

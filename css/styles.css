@@ -12,7 +12,15 @@ body {
   scroll-behavior: smooth;
   width: 100vw;
   height: 100vh;
-  background-color: red;
+  background-color: #161513;
+  gap: 0;
+}
+body .bg-img {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  z-index: -1;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -20,6 +28,7 @@ body::-webkit-scrollbar {
 body section {
   background-color: #161513;
   width: 100vw;
+  z-index: 2;
 }
 
 .center {
@@ -66,8 +75,14 @@ footer main .footer-contents .column {
 }
 footer main .footer-contents .column .social-media-icons {
   gap: 1em;
+  align-self: center;
 }
-footer main .footer-contents .column p {
+footer main .footer-contents .column .ad {
+  flex-direction: column;
+  border-bottom: 1px solid white;
+  padding: 1em 0em;
+}
+footer main .footer-contents .column .cnt {
   flex-direction: column;
 }
 
@@ -215,12 +230,42 @@ header nav ul li a:hover {
   font-size: 14px;
 }
 
+.about {
+  color: white;
+  padding: 4em 1em;
+  padding-bottom: 0;
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3em;
+}
+.about .abt-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.about .abt-details p {
+  text-align: center;
+}
+.about .abt-details .sub-cnt {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.about .speaker {
+  width: auto;
+  height: 400px;
+}
+
 .yt-videos {
   flex-direction: column;
   gap: 3em;
   padding: 13em 0;
   padding-top: 5em;
-  background-color: black;
 }
 .yt-videos .video-grid {
   display: grid;
@@ -237,11 +282,15 @@ header nav ul li a:hover {
 }
 
 .photo-sec {
-  padding: 5em 0;
+  height: 200px;
+  background-color: transparent;
+  filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .photo-sec main {
   flex-direction: column;
   padding: 0 1em;
+  display: none;
 }
 .photo-sec main .ph1 {
   flex: 1;
@@ -270,11 +319,66 @@ header nav ul li a:hover {
     gap: 5em;
   }
   header nav ul li a {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 400;
   }
   .sub-heading {
     font-size: 4rem;
+  }
+  .hero main {
+    gap: 1em;
+    padding: 0 5em;
+    gap: 2em;
+  }
+  .hero main .headings .title {
+    font-size: 4rem;
+    color: #00ffb6;
+  }
+  .hero main .headings .sub-title {
+    font-size: 2rem;
+  }
+  .hero main .swiper {
+    width: 70%;
+  }
+  .hero main .swiper .swiper-slide {
+    padding: 0em 1em;
+  }
+  .hero main .swiper .swiper-slide img {
+    -o-object-position: top;
+       object-position: top;
+    height: 500px;
+    width: auto;
+    margin: 0em 5em;
+  }
+  .hero main .swiper .swiper-slide video {
+    width: 100%;
+    height: 500px;
+    margin: 0em 5em;
+  }
+  .hero main p {
+    padding: 0;
+    font-size: 1rem;
+  }
+  .about {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 5em 5em;
+    padding-bottom: 0;
+  }
+  .about .abt-details {
+    padding-bottom: 5em;
+    justify-content: flex-start;
+  }
+  .about .abt-details .sub-heading {
+    align-self: flex-start;
+  }
+  .about .abt-details p {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .about .abt-details .sub-cnt {
+    font-size: 1rem;
   }
   .yt-videos {
     gap: 10em;
@@ -306,9 +410,49 @@ header nav ul li a:hover {
 }
 @media only screen and (min-width: 1300px) {
   footer {
-    padding: 5em 10em;
+    padding: 5em 5em;
   }
   footer main .footer-contents {
+    gap: 3em;
+  }
+  .about {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 5em 5em;
+    padding-bottom: 0;
     gap: 5em;
+  }
+  .about .abt-details {
+    height: 600px;
+    padding: 5em 0;
+    justify-content: center;
+    justify-content: flex-start;
+  }
+  .about .abt-details .sub-heading {
+    align-self: flex-start;
+  }
+  .about .abt-details p {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .about .abt-details .sub-cnt {
+    font-size: 1rem;
+  }
+  .about .speaker {
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  footer main .footer-contents .address .addresses {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5em;
+  }
+  footer main .footer-contents .address .addresses .ad {
+    border: none;
+    padding: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

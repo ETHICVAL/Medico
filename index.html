@@ -14,7 +14,7 @@
     <title>Medico</title>
 </head>
 <body>
-
+    <img src="./assets/bg.jpeg" alt="bg" class="bg-img">
     <!-- Hero Section -->
     <section class="hero center" id="hero">
 
@@ -29,9 +29,9 @@
             <nav>
                 <ul>
                     <li> <a href="#hero">Home</a> </li>
-                    <li> <a href="#hero">About</a> </li>
-                    <li> <a href="#hero">Videos</a> </li>
-                    <li> <a href="#hero">Testimonials</a> </li>
+                    <li> <a href="#about">About</a> </li>
+                    <li> <a href="#videos">Videos</a> </li>
+                    <li> <a href="#testimonials">Testimonials</a> </li>
                 </ul>
             </nav>
             <label class="hamburger">
@@ -54,24 +54,28 @@
                   <div class="swiper-slide">
                     <video width="320" height="240" controls>
                         <source src="./assets/slider/1.mp4" type="video/mp4">
+                        <source src="./assets/slider/1.webm" type="video/webm">
                         Your browser does not support the video tag.
                     </video>
                   </div>
                   <div class="swiper-slide">
                     <video width="320" height="240" controls>
                         <source src="./assets/slider/2.mp4" type="video/mp4">
+                        <source src="./assets/slider/2.webm" type="video/webm">
                         Your browser does not support the video tag.
                     </video>
                   </div>
                   <div class="swiper-slide">
                     <video width="320" height="240" controls>
                         <source src="./assets/slider/3.mp4" type="video/mp4">
+                        <source src="./assets/slider/3.webm" type="video/webm">
                         Your browser does not support the video tag.
                     </video>
                   </div>
                   <div class="swiper-slide">
                     <video width="320" height="240" controls>
                         <source src="./assets/slider/4.mp4" type="video/mp4">
+                        <source src="./assets/slider/4.webm" type="video/webm">
                         Your browser does not support the video tag.
                     </video>
                   </div>
@@ -90,7 +94,7 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-pagination"></div> -->
               </div>
             <p>
                 With over 11 years of experience in the field, I'm Sam, your dedicated trainer, committed to imparting the knowledge and expertise needed for a successful career in healthcare.
@@ -101,7 +105,16 @@
 
     <!-- About Section -->
     <section class="about" id="about">
-
+        <div class="abt-details">
+            <h2 class="sub-heading center">About</h2>
+            <p class="main-cnt">
+                Embark on a fulfilling journey towards a rewarding medical career with our comprehensive training programs designed to equip you with the knowledge and skills needed to excel in the healthcare industry.
+            </p>
+            <p class="sub-cnt">
+                With over 11 years of experience in the field, I'm Sam, your dedicated trainer, committed to imparting the knowledge and expertise needed for a successful career in healthcare.
+            </p>
+        </div>
+        <img class="center speaker" src="./assets/speaker.png" alt="photo">
     </section>
 
     <!-- Photo Section -->
@@ -117,7 +130,7 @@
     </section> -->
 
     <!-- Youtube videos -->
-    <section class="yt-videos center">
+    <section class="yt-videos center" id="videos">
         <h2 class="sub-heading">
             Youtube Videos
         </h2>
@@ -144,45 +157,60 @@
                 <div class="follow-us column center">
                     <h2>Follow us on</h2>
                     <div class="social-media-icons center">
-                        <a href="">
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100064090713355">
                             <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 15.0838C0.5 22.5413 5.91625 28.7425 13 30V19.1663H9.25V15H13V11.6663C13 7.91625 15.4163 5.83375 18.8337 5.83375C19.9163 5.83375 21.0837 6 22.1663 6.16625V10H20.25C18.4163 10 18 10.9163 18 12.0837V15H22L21.3337 19.1663H18V30C25.0837 28.7425 30.5 22.5425 30.5 15.0838C30.5 6.7875 23.75 0 15.5 0C7.25 0 0.5 6.7875 0.5 15.0838Z" fill="white"/>
                             </svg>
                         </a>
-                        <a href="">
+                        <a target="_blank" href="https://www.instagram.com/medicocareer/">
                             <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.785 2.5C18.1912 2.50375 18.905 2.51125 19.5212 2.52875L19.7637 2.5375C20.0437 2.5475 20.32 2.56 20.6537 2.575C21.9837 2.6375 22.8912 2.8475 23.6875 3.15625C24.5125 3.47375 25.2075 3.90375 25.9025 4.5975C26.5381 5.22237 27.0299 5.97824 27.3437 6.8125C27.6525 7.60875 27.8625 8.51625 27.925 9.8475C27.94 10.18 27.9525 10.4563 27.9625 10.7375L27.97 10.98C27.9887 11.595 27.9962 12.3088 27.9987 13.715L28 14.6475V16.285C28.0031 17.1968 27.9935 18.1085 27.9712 19.02L27.9637 19.2625C27.9537 19.5437 27.9412 19.82 27.9262 20.1525C27.8637 21.4837 27.6512 22.39 27.3437 23.1875C27.0308 24.0222 26.5389 24.7783 25.9025 25.4025C25.2774 26.0379 24.5216 26.5297 23.6875 26.8438C22.8912 27.1525 21.9837 27.3625 20.6537 27.425C20.3571 27.439 20.0605 27.4515 19.7637 27.4625L19.5212 27.47C18.905 27.4875 18.1912 27.4963 16.785 27.4988L15.8525 27.5H14.2162C13.3041 27.5031 12.3919 27.4936 11.48 27.4712L11.2375 27.4638C10.9408 27.4525 10.6441 27.4396 10.3475 27.425C9.01749 27.3625 8.10999 27.1525 7.31249 26.8438C6.47833 26.5305 5.72276 26.0386 5.09874 25.4025C4.46255 24.7779 3.97027 24.0219 3.65624 23.1875C3.34749 22.3912 3.13749 21.4837 3.07499 20.1525C3.06106 19.8559 3.04856 19.5592 3.03749 19.2625L3.03124 19.02C3.0082 18.1085 2.99779 17.1968 2.99999 16.285V13.715C2.9965 12.8033 3.00567 11.8915 3.02749 10.98L3.03624 10.7375C3.04624 10.4563 3.05874 10.18 3.07374 9.8475C3.13624 8.51625 3.34624 7.61 3.65499 6.8125C3.96888 5.97738 4.46214 5.22128 5.09999 4.5975C5.72385 3.96184 6.47892 3.46998 7.31249 3.15625C8.10999 2.8475 9.01624 2.6375 10.3475 2.575C10.68 2.56 10.9575 2.5475 11.2375 2.5375L11.48 2.53C12.3915 2.50779 13.3032 2.49821 14.215 2.50125L16.785 2.5ZM15.5 8.75C13.8424 8.75 12.2527 9.40848 11.0806 10.5806C9.90847 11.7527 9.24999 13.3424 9.24999 15C9.24999 16.6576 9.90847 18.2473 11.0806 19.4194C12.2527 20.5915 13.8424 21.25 15.5 21.25C17.1576 21.25 18.7473 20.5915 19.9194 19.4194C21.0915 18.2473 21.75 16.6576 21.75 15C21.75 13.3424 21.0915 11.7527 19.9194 10.5806C18.7473 9.40848 17.1576 8.75 15.5 8.75ZM15.5 11.25C15.9924 11.2499 16.4801 11.3468 16.9351 11.5352C17.3901 11.7236 17.8035 11.9997 18.1518 12.3479C18.5001 12.6961 18.7764 13.1094 18.9649 13.5644C19.1535 14.0193 19.2505 14.5069 19.2506 14.9994C19.2507 15.4918 19.1538 15.9795 18.9654 16.4345C18.777 16.8895 18.5009 17.3029 18.1527 17.6512C17.8045 17.9995 17.3912 18.2758 16.9363 18.4643C16.4813 18.6528 15.9937 18.7499 15.5012 18.75C14.5067 18.75 13.5528 18.3549 12.8496 17.6517C12.1463 16.9484 11.7512 15.9946 11.7512 15C11.7512 14.0054 12.1463 13.0516 12.8496 12.3483C13.5528 11.6451 14.5067 11.25 15.5012 11.25M22.0637 6.875C21.6493 6.875 21.2519 7.03962 20.9589 7.33265C20.6659 7.62567 20.5012 8.0231 20.5012 8.4375C20.5012 8.8519 20.6659 9.24933 20.9589 9.54235C21.2519 9.83538 21.6493 10 22.0637 10C22.4781 10 22.8756 9.83538 23.1686 9.54235C23.4616 9.24933 23.6262 8.8519 23.6262 8.4375C23.6262 8.0231 23.4616 7.62567 23.1686 7.33265C22.8756 7.03962 22.4781 6.875 22.0637 6.875Z" fill="white"/>
                             </svg>
                         </a>
-                        <a href="">
-                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_53_21)">
-                                <path d="M18.2928 12.7031L29.2208 0H26.6309L17.1425 11.0297L9.56376 0H0.82251L12.283 16.6791L0.82251 30H3.41235L13.4328 18.3523L21.4363 30H30.1775L18.2921 12.7031H18.2928ZM14.7458 16.8258L13.5845 15.165L4.3454 1.94953H8.32321L15.7789 12.615L16.94 14.2758L26.6321 28.1391H22.6548L14.7458 16.8265V16.8258Z" fill="white"/>
+                        <a target="_blank" href="https://wa.me/message/OZAOK2AWSMXAH1?src=qr">
+                            <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_94_2)">
+                                <path d="M18.4687 16.4623C18.6312 16.4623 19.2406 16.7373 20.2969 17.2873C21.3531 17.8373 21.9125 18.1686 21.975 18.2811C22 18.3436 22.0125 18.4373 22.0125 18.5623C22.0125 18.9748 21.9062 19.4498 21.6937 19.9873C21.4937 20.4748 21.05 20.8842 20.3625 21.2154C19.675 21.5467 19.0375 21.7123 18.45 21.7123C17.7375 21.7123 16.55 21.3248 14.8875 20.5498C13.6625 19.9873 12.6 19.2498 11.7 18.3373C10.8 17.4248 9.875 16.2686 8.925 14.8686C8.025 13.5311 7.58125 12.3186 7.59375 11.2311V11.0811C7.63125 9.94355 8.09375 8.95605 8.98125 8.11855C9.28125 7.84355 9.60625 7.70605 9.95625 7.70605C10.0312 7.70605 10.1437 7.71543 10.2937 7.73418C10.4437 7.75293 10.5625 7.7623 10.65 7.7623C10.8875 7.7623 11.0531 7.80293 11.1469 7.88418C11.2406 7.96543 11.3375 8.1373 11.4375 8.3998C11.5375 8.6498 11.7437 9.1998 12.0562 10.0498C12.3687 10.8998 12.525 11.3686 12.525 11.4561C12.525 11.7186 12.3094 12.0779 11.8781 12.5342C11.4469 12.9904 11.2312 13.2811 11.2312 13.4061C11.2312 13.4936 11.2625 13.5873 11.325 13.6873C11.75 14.5998 12.3875 15.4561 13.2375 16.2561C13.9375 16.9186 14.8812 17.5498 16.0687 18.1498C16.2187 18.2373 16.3562 18.2811 16.4812 18.2811C16.6687 18.2811 17.0062 17.9779 17.4937 17.3717C17.9812 16.7654 18.3062 16.4623 18.4687 16.4623ZM14.6625 26.3998C16.25 26.3998 17.7719 26.0873 19.2281 25.4623C20.6844 24.8373 21.9375 23.9998 22.9875 22.9498C24.0375 21.8998 24.875 20.6467 25.5 19.1904C26.125 17.7342 26.4375 16.2123 26.4375 14.6248C26.4375 13.0373 26.125 11.5154 25.5 10.0592C24.875 8.60293 24.0375 7.3498 22.9875 6.2998C21.9375 5.2498 20.6844 4.4123 19.2281 3.7873C17.7719 3.1623 16.25 2.8498 14.6625 2.8498C13.075 2.8498 11.5531 3.1623 10.0969 3.7873C8.64062 4.4123 7.3875 5.2498 6.3375 6.2998C5.2875 7.3498 4.45 8.60293 3.825 10.0592C3.2 11.5154 2.8875 13.0373 2.8875 14.6248C2.8875 17.1623 3.6375 19.4623 5.1375 21.5248L3.65625 25.8936L8.19375 24.4498C10.1687 25.7498 12.325 26.3998 14.6625 26.3998ZM14.6625 0.487305C16.575 0.487305 18.4031 0.862305 20.1469 1.6123C21.8906 2.3623 23.3937 3.36855 24.6562 4.63105C25.9187 5.89355 26.925 7.39668 27.675 9.14043C28.425 10.8842 28.8 12.7123 28.8 14.6248C28.8 16.5373 28.425 18.3654 27.675 20.1092C26.925 21.8529 25.9187 23.3561 24.6562 24.6186C23.3937 25.8811 21.8906 26.8873 20.1469 27.6373C18.4031 28.3873 16.575 28.7623 14.6625 28.7623C12.225 28.7623 9.94375 28.1748 7.81875 26.9998L0 29.5123L2.55 21.9186C1.2 19.6936 0.525 17.2623 0.525 14.6248C0.525 12.7123 0.9 10.8842 1.65 9.14043C2.4 7.39668 3.40625 5.89355 4.66875 4.63105C5.93125 3.36855 7.43437 2.3623 9.17812 1.6123C10.9219 0.862305 12.75 0.487305 14.6625 0.487305Z" fill="white"/>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_53_21">
-                                <rect width="30" height="30" fill="white" transform="translate(0.5)"/>
+                                <clipPath id="clip0_94_2">
+                                <rect width="28.8" height="30" fill="white"/>
                                 </clipPath>
                                 </defs>
-                            </svg>    
+                            </svg>     
                         </a>                            
                     </div>                        
                 </div>
 
                 <div class="address column center">
                     <h2>Office Address</h2>
-                    <p class="center">
-                        <span>Thiruvankulam</span>
-                        <span>Kochi</span>
-                        <span>Kerala</span>
-                    </p>
+                    <div class="addresses">
+                        <p class="ad ad1 center">
+                            <span>Rainbow Arcade</span>
+                            <span>Near Indoor Stadium</span>
+                            <span>Pilathara</span>
+                            <span>Kannur - 670504</span>
+                        </p>
+                        <p class="ad ad2 center">
+                            <span>3B , UNI Arcade </span>
+                            <span>Canal Road </span>
+                            <span>Judges Avenue</span>
+                            <span>Kaloor</span>
+                            <span>Kochi - 682017</span>
+                        </p>
+                        <p class="ad ad3 center">
+                            <span>1st Floor RVP Tower</span>
+                            <span>Kazhakkutom</span>
+                            <span>Trivandrum - 695582</span>
+                        </p>
+                    </div>
                 </div>
 
                 <div class="contact column center">
                     <h2>Contact</h2>
-                    <p class="center">
-                        <span>Email ID: medico@gmail.com</span>
-                        <span>Phone No: +91 9232342342</span>
+                    <p class="cnt center">
+                        <span>info.medicocareerpartner@gmail.com</span>
+                        <span>+91 95676 47991</span>
                     </p>
                 </div>
 
