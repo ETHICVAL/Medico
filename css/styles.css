@@ -175,7 +175,7 @@ header nav ul li a:hover {
 
 .hero {
   flex-direction: column;
-  padding-bottom: 2em;
+  padding-bottom: 5em;
 }
 .hero main {
   display: flex;
