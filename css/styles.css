@@ -271,7 +271,7 @@ header nav ul li a:hover {
   display: grid;
   grid-template-columns: auto;
   place-content: center;
-  row-gap: 1em;
+  row-gap: 3em;
   -moz-column-gap: 2em;
        column-gap: 2em;
   width: 100%;
