@@ -33,7 +33,8 @@ body{
         display: none;
     }
     section{
-        background-color: $bg-color;
+        // background-color: $bg-color;
+        background: linear-gradient(289deg, #185550 36.57%, #09C87D 98.94%);
         width: 100vw;
         z-index: 2;
     }
@@ -139,24 +140,24 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 80px;
-    position: relative;
     padding: 1em 2em;
     z-index: 10;
     .logo-container{
         img{
-            height: 30px;
+            height: 100px;
+            width: 180px;
+            object-fit: cover;
         }
     }
     nav{
         width: 100vw;
         display: block;
         position: absolute;
-        top: 80px;
+        top: 120px;
         left: 0;
         z-index: 5;
         transform: scale(1, 0);
@@ -199,15 +200,15 @@ header{
 .hero{
     flex-direction: column;
     padding-bottom: 3em;
+    position: relative;
     main{
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
+        // height: 100vh;
         width: 100%;
-        padding: 2em 0;
-        padding-bottom: 2em;
+        padding: 10em 0;
         gap: 3em;
         .headings{
             .title{
@@ -252,9 +253,46 @@ header{
             padding: 0 2em;
             font-size: 14px;
         }
-        .social{
-            gap: 2em;
-            padding: 2em 0em;
+    }
+}
+
+.social{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding: 5em 0;
+    .headings{
+        padding: 1em 2em;
+        p{
+            color: white;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .discover{
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding-bottom: 1em;
+        }
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            gap: 1em;
+            font-size: 1.2rem;
+            font-weight: 800;
         }
     }
 }
@@ -262,13 +300,11 @@ header{
 .about{
     color: white;
     padding: 4em 1em;
-    padding-bottom: 0;
-    background-color: black;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 3em;
     .abt-details{
         display: flex;
@@ -283,10 +319,52 @@ header{
             font-size: 14px;
             color: rgba(255, 255, 255, 0.7);
         }
+        .submit-btn{
+            text-decoration: none;
+            color: black;
+            background-color: $green;
+            border-radius: 10px;
+            padding: 1em 4em;
+            flex-direction: column;
+            .main{
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+            .sub{
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+        }
     }
     .speaker{
         width: auto;
         height: 400px;
+    }
+}
+.testimonials{
+    flex-direction: column;
+    background-color: $green;
+    padding: 5em 2em;
+    h2{
+        color: black;
+    }
+    .content-sec{
+        width: 100%;
+        gap: 3em;
+        padding-top: 3em;
+        flex-direction: column;
+        .card{
+            flex-direction: column;
+            gap: 1em;
+            p{
+                text-align: center;
+                font-size: 1rem;
+            }
+            .name, .desig{
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+        }
     }
 }
 
@@ -334,13 +412,13 @@ header{
 @media only screen and (min-width: 1000px){
     header{
         padding: 2em 3em;
-        padding-top: 4em;
         .hamburger{
             display: none;
         }
         .logo-container{
             img{
-                height: 50px;
+                height: 120px;
+                width: 200px;
             }
         }
         nav{
@@ -348,13 +426,17 @@ header{
             position:static;
             top: 0;
             width: auto;
+            align-self: flex-start;
             ul{
+                background-color: blue;
+                align-items: flex-start;
                 flex-direction: row;
                 background-color: transparent;
+
                 gap: 3em;
                 li{
                     a{
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                         font-weight: 400;
                     }
                 }
@@ -367,8 +449,10 @@ header{
 
     .hero{
         main{
-            padding: 0 5em;
-            gap: 1em;
+            padding: 5em 5em;
+            gap: 5em;
+            height: 90vh;
+            // justify-content: center;
             .headings{
                 .title{
                     font-size: 5rem;
@@ -392,14 +476,14 @@ header{
                     }
                     video{
                         width: 100%;
-                        height: 450px;
+                        height: 500px;
                         margin: 0em 5em;
                     }
                 }
             }
             p{
                 padding: 0;
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             .social{
                 flex-direction: column;
@@ -410,14 +494,31 @@ header{
             }
         }
     }
+    .social{
+        flex-direction: column;
+        padding: 5em 0;
+        gap: 3em;
+        .headings{
+            p{
+                font-size: 1.2rem;
+            }
+            .discover{
+                font-size: 1.5rem;
+            }
+        }
+        main{
+            flex-direction: row;
+            gap: 5em;
+        }
+    }
     .about{
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
         padding: 5em 5em;
-        padding-bottom: 0;
         .abt-details{
             padding-bottom: 5em;
+            align-items: flex-start;
             .sub-heading{
                 align-self: flex-start;
             }
@@ -429,11 +530,40 @@ header{
             .sub-cnt{
                 font-size: 1rem;
             }
+            .submit-btn{
+                margin-top: 4em;
+                .main{
+                    font-size: 1.5rem;
+                }
+                .sub{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .testimonials{
+        padding: 8em 8em;
+        .content-sec{
+            flex-direction: row;
+            gap: 5em;
+            .card{
+                gap: 2em;
+                .quote{
+                    width: 80px;
+                    height: auto;
+                }
+                p{
+                    font-size: 1.3rem;
+                }
+                .name, .desig{
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
     .yt-videos{
-        gap: 5em;
-        padding: 5em 0;
+        gap: 8em;
+        padding: 10em 0;
         .video-grid{
             grid-template-columns: auto auto;
             justify-content: space-evenly;
@@ -471,12 +601,27 @@ header{
             gap: 3em;
         }
     }
+    .social{
+        .headings{
+            p{
+                font-size: 1.5rem;
+            }
+            .discover{
+                font-size: 2rem;
+            }
+        }
+        main{
+            gap: 6em;
+            a{
+                font-size: 1.5rem;
+            }
+        }
+    }
     .about{
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
         padding: 5em 5em;
-        padding-bottom: 0;
         gap: 5em;
         .abt-details{
             height: 600px;
@@ -488,10 +633,10 @@ header{
             justify-content: flex-start;
             p{
                 text-align: left;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
             .sub-cnt{
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
         }
         .speaker{

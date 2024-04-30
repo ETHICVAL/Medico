@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 body section {
-  background-color: #161513;
+  background: linear-gradient(289deg, #185550 36.57%, #09C87D 98.94%);
   width: 100vw;
   z-index: 2;
 }
@@ -130,23 +130,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 80px;
-  position: relative;
   padding: 1em 2em;
   z-index: 10;
 }
 header .logo-container img {
-  height: 30px;
+  height: 100px;
+  width: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header nav {
   width: 100vw;
   display: block;
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 0;
   z-index: 5;
   transform: scale(1, 0);
@@ -186,16 +187,15 @@ header nav ul li a:hover {
 .hero {
   flex-direction: column;
   padding-bottom: 3em;
+  position: relative;
 }
 .hero main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   width: 100%;
-  padding: 2em 0;
-  padding-bottom: 2em;
+  padding: 10em 0;
   gap: 3em;
 }
 .hero main .headings .title {
@@ -239,21 +239,56 @@ header nav ul li a:hover {
   padding: 0 2em;
   font-size: 14px;
 }
-.hero main .social {
+
+.social {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  padding: 5em 0;
+}
+.social .headings {
+  padding: 1em 2em;
+}
+.social .headings p {
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.social .headings .discover {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-bottom: 1em;
+}
+.social main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2em;
-  padding: 2em 0em;
+}
+.social main a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  gap: 1em;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 .about {
   color: white;
   padding: 4em 1em;
-  padding-bottom: 0;
-  background-color: black;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 3em;
 }
 .about .abt-details {
@@ -270,9 +305,52 @@ header nav ul li a:hover {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
 }
+.about .abt-details .submit-btn {
+  text-decoration: none;
+  color: black;
+  background-color: #00ffb6;
+  border-radius: 10px;
+  padding: 1em 4em;
+  flex-direction: column;
+}
+.about .abt-details .submit-btn .main {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.about .abt-details .submit-btn .sub {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
 .about .speaker {
   width: auto;
   height: 400px;
+}
+
+.testimonials {
+  flex-direction: column;
+  background-color: #00ffb6;
+  padding: 5em 2em;
+}
+.testimonials h2 {
+  color: black;
+}
+.testimonials .content-sec {
+  width: 100%;
+  gap: 3em;
+  padding-top: 3em;
+  flex-direction: column;
+}
+.testimonials .content-sec .card {
+  flex-direction: column;
+  gap: 1em;
+}
+.testimonials .content-sec .card p {
+  text-align: center;
+  font-size: 1rem;
+}
+.testimonials .content-sec .card .name, .testimonials .content-sec .card .desig {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .yt-videos {
@@ -316,35 +394,39 @@ header nav ul li a:hover {
 @media only screen and (min-width: 1000px) {
   header {
     padding: 2em 3em;
-    padding-top: 4em;
   }
   header .hamburger {
     display: none;
   }
   header .logo-container img {
-    height: 50px;
+    height: 120px;
+    width: 200px;
   }
   header nav {
     transform: scale(1, 1);
     position: static;
     top: 0;
     width: auto;
+    align-self: flex-start;
   }
   header nav ul {
+    background-color: blue;
+    align-items: flex-start;
     flex-direction: row;
     background-color: transparent;
     gap: 3em;
   }
   header nav ul li a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
   }
   .sub-heading {
     font-size: 4rem;
   }
   .hero main {
-    padding: 0 5em;
-    gap: 1em;
+    padding: 5em 5em;
+    gap: 5em;
+    height: 90vh;
   }
   .hero main .headings .title {
     font-size: 5rem;
@@ -369,12 +451,12 @@ header nav ul li a:hover {
   }
   .hero main .swiper .swiper-slide video {
     width: 100%;
-    height: 450px;
+    height: 500px;
     margin: 0em 5em;
   }
   .hero main p {
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .hero main .social {
     flex-direction: column;
@@ -383,15 +465,30 @@ header nav ul li a:hover {
     top: 50%;
     transform: translateY(-50%);
   }
+  .social {
+    flex-direction: column;
+    padding: 5em 0;
+    gap: 3em;
+  }
+  .social .headings p {
+    font-size: 1.2rem;
+  }
+  .social .headings .discover {
+    font-size: 1.5rem;
+  }
+  .social main {
+    flex-direction: row;
+    gap: 5em;
+  }
   .about {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     padding: 5em 5em;
-    padding-bottom: 0;
   }
   .about .abt-details {
     padding-bottom: 5em;
+    align-items: flex-start;
     justify-content: flex-start;
   }
   .about .abt-details .sub-heading {
@@ -404,9 +501,38 @@ header nav ul li a:hover {
   .about .abt-details .sub-cnt {
     font-size: 1rem;
   }
-  .yt-videos {
+  .about .abt-details .submit-btn {
+    margin-top: 4em;
+  }
+  .about .abt-details .submit-btn .main {
+    font-size: 1.5rem;
+  }
+  .about .abt-details .submit-btn .sub {
+    font-size: 1.2rem;
+  }
+  .testimonials {
+    padding: 8em 8em;
+  }
+  .testimonials .content-sec {
+    flex-direction: row;
     gap: 5em;
-    padding: 5em 0;
+  }
+  .testimonials .content-sec .card {
+    gap: 2em;
+  }
+  .testimonials .content-sec .card .quote {
+    width: 80px;
+    height: auto;
+  }
+  .testimonials .content-sec .card p {
+    font-size: 1.3rem;
+  }
+  .testimonials .content-sec .card .name, .testimonials .content-sec .card .desig {
+    font-size: 1.5rem;
+  }
+  .yt-videos {
+    gap: 8em;
+    padding: 10em 0;
   }
   .yt-videos .video-grid {
     grid-template-columns: auto auto;
@@ -439,12 +565,23 @@ header nav ul li a:hover {
   footer main .footer-contents {
     gap: 3em;
   }
+  .social .headings p {
+    font-size: 1.5rem;
+  }
+  .social .headings .discover {
+    font-size: 2rem;
+  }
+  .social main {
+    gap: 6em;
+  }
+  .social main a {
+    font-size: 1.5rem;
+  }
   .about {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     padding: 5em 5em;
-    padding-bottom: 0;
     gap: 5em;
   }
   .about .abt-details {
@@ -458,10 +595,10 @@ header nav ul li a:hover {
   }
   .about .abt-details p {
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .about .abt-details .sub-cnt {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .about .speaker {
     height: 600px;
