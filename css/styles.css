@@ -353,6 +353,11 @@ header nav ul li a:hover {
   font-size: 1.2rem;
 }
 
+.insta {
+  padding: 5em 1em;
+  background-color: #1c1b1b;
+}
+
 .yt-videos {
   flex-direction: column;
   gap: 3em;
@@ -529,6 +534,10 @@ header nav ul li a:hover {
   }
   .testimonials .content-sec .card .name, .testimonials .content-sec .card .desig {
     font-size: 1.5rem;
+  }
+  .insta {
+    padding: 5em 10em;
+    background-color: #1c1b1b;
   }
   .yt-videos {
     gap: 8em;
