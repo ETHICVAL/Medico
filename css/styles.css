@@ -13,7 +13,6 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #161513;
-  gap: 0;
 }
 body .bg-img {
   position: fixed;
@@ -138,8 +137,8 @@ header {
   z-index: 10;
 }
 header .logo-container img {
-  height: 100px;
-  width: 180px;
+  height: 120px;
+  width: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -241,6 +240,7 @@ header nav ul li a:hover {
 }
 
 .social {
+  background: none;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -327,6 +327,7 @@ header nav ul li a:hover {
 }
 
 .testimonials {
+  background: none;
   flex-direction: column;
   background-color: #00ffb6;
   padding: 5em 2em;
@@ -355,6 +356,7 @@ header nav ul li a:hover {
 
 .insta {
   padding: 5em 1em;
+  background: none;
   background-color: #1c1b1b;
 }
 
@@ -404,8 +406,8 @@ header nav ul li a:hover {
     display: none;
   }
   header .logo-container img {
-    height: 120px;
-    width: 200px;
+    height: 150px;
+    width: auto;
   }
   header nav {
     transform: scale(1, 1);
@@ -461,7 +463,7 @@ header nav ul li a:hover {
   }
   .hero main p {
     padding: 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .hero main .social {
     flex-direction: column;

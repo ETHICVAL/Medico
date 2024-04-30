@@ -20,7 +20,6 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: $bg-color;
-    gap: 0;
     .bg-img{
         position: fixed;
         top: 50%;
@@ -148,8 +147,8 @@ header{
     z-index: 10;
     .logo-container{
         img{
-            height: 100px;
-            width: 180px;
+            height: 120px;
+            width: auto;
             object-fit: cover;
         }
     }
@@ -257,6 +256,7 @@ header{
 }
 
 .social{
+    background: none;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -342,6 +342,7 @@ header{
     }
 }
 .testimonials{
+    background: none;
     flex-direction: column;
     background-color: $green;
     padding: 5em 2em;
@@ -370,6 +371,7 @@ header{
 
 .insta{
     padding: 5em 1em;
+    background: none;
     background-color: #1c1b1b;
 }
 
@@ -422,8 +424,8 @@ header{
         }
         .logo-container{
             img{
-                height: 120px;
-                width: 200px;
+                height: 150px;
+                width: auto;
             }
         }
         nav{
@@ -488,7 +490,7 @@ header{
             }
             p{
                 padding: 0;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             .social{
                 flex-direction: column;
