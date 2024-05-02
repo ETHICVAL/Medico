@@ -46,7 +46,6 @@ body{
 }
 
 .sub-heading{
-    font-family: Montserrat;
     font-size: 2.2rem;
     font-style: normal;
     font-weight: 600;
@@ -426,6 +425,7 @@ header{
             img{
                 height: 150px;
                 width: auto;
+                aspect-ratio: 3/2;
             }
         }
         nav{
@@ -456,7 +456,7 @@ header{
 
     .hero{
         main{
-            padding: 5em 5em;
+            padding: 0em 5em;
             gap: 5em;
             height: 90vh;
             // justify-content: center;
@@ -473,6 +473,10 @@ header{
 
             .swiper{
                 width: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 .swiper-slide {
                     padding: 0em 1em;
                     img{
@@ -482,9 +486,10 @@ header{
                         margin: 0em 5em;
                     }
                     video{
+                        padding: 2em;
                         width: 100%;
-                        height: 500px;
-                        margin: 0em 5em;
+                        height: 100%;
+                        margin: 0em 10em;
                     }
                 }
             }
