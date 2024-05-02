@@ -3,8 +3,13 @@ const navBar = document.querySelector("nav").classList
 
 
 menuBtn.addEventListener("click", e => {
-    navBar.toggle("open");
-    console.log(navBar);
+  if(navBar.contains("open")){
+    navBar.remove("open");
+  }
+  else{
+    navBar.add("open");
+  }
+  console.log(navBar);
 });
 
 var swiper = new Swiper(".mySwiper", {
