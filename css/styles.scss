@@ -174,6 +174,8 @@ header{
             li{
                 a{
                     font-size: 1.1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
                     text-decoration: none;
                     color: white;
                     &:hover{
@@ -203,11 +205,11 @@ header{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         // height: 100vh;
         width: 100%;
-        padding: 10em 0;
-        padding-top: 5em;
+        padding: 3em 0;
+        padding-top: 4em;
         gap: 3em;
         .headings{
             .title{
@@ -286,11 +288,12 @@ header{
 .about{
     color: white;
     padding: 4em 1em;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: none;
+    background-color: #0EB476;
     gap: 3em;
     .abt-details{
         display: flex;
@@ -298,34 +301,71 @@ header{
         align-items: center;
         justify-content: center;
         gap: 2em;
+        .col1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            .main-cnt{
+                font-size: 1.7rem;
+                font-weight: 600;
+            }
+            .submit-btn{
+                text-decoration: none;
+                color: black;
+                background-color: $green;
+                border-radius: 5px;
+                padding: .9em 3em;
+                flex-direction: column;
+                .main{
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+                .sub{
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+            }
+        }
         p{
             text-align: center;
         }
-        .sub-cnt{
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        .submit-btn{
-            text-decoration: none;
-            color: black;
-            background-color: $green;
-            border-radius: 10px;
-            padding: 1em 4em;
+        .col2{
+            display: flex;
             flex-direction: column;
-            .main{
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            .sub-cnt{
                 font-size: 1.2rem;
-                font-weight: 700;
+                font-weight: 600;
+                color: white;
+                padding: 1em 1em;
             }
-            .sub{
-                font-size: 1.1rem;
-                font-weight: 400;
+            .loc{
+                border: 3px solid #0bec9a;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                border-radius: 10px;
+                padding: 1em 1.5em;
+                gap: 1em;
+                p{
+                    color: #e3ff37;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    text-align: left;
+                }
             }
         }
+        .speaker{
+            width: auto;
+            height: 400px;
+        }
     }
-    .speaker{
-        width: auto;
-        height: 400px;
-    }
+
 }
 .testimonials{
     background: none;
@@ -404,7 +444,7 @@ header{
 
 @media only screen and (min-width: 1000px){
     header{
-        padding: 2em 3em;
+        padding: 1em 3em;
         .hamburger{
             display: none;
         }
@@ -431,7 +471,7 @@ header{
                 li{
                     a{
                         font-size: 1.2rem;
-                        font-weight: 400;
+                        font-weight: 600;
                     }
                 }
             }
@@ -444,21 +484,23 @@ header{
     .hero{
         main{
             padding: 0em 5em;
-            gap: 5em;
+            gap: 0em;
             height: 90vh;
             // justify-content: center;
-            .headings{
-                .title{
-                    font-size: 5rem;
-                    color: $green;
-                }
-                .sub-title{
-                    font-size: 3rem;
-                    transform: translateY(-14px);
-                }
-            }
+            // .headings{
+            //     .title{
+            //         font-size: 5rem;
+            //         color: $green;
+            //     }
+            //     .sub-title{
+            //         font-size: 3rem;
+            //         transform: translateY(-14px);
+            //     }
+            // }
 
             .swiper{
+                // background-color: $green;
+                padding-top: 0;
                 width: 70%;
                 height: 100%;
                 display: flex;
@@ -485,61 +527,74 @@ header{
                 font-size: 1.2rem;
             }
             .social{
-                flex-direction: column;
-                position: absolute;
-                right: 2em;
-                top: 50%;
-                transform: translateY(-50%);
+                flex-direction: row-reverse;
             }
-        }
-    }
-    .social{
-        flex-direction: column;
-        padding: 5em 0;
-        gap: 3em;
-        .headings{
-            p{
-                font-size: 1.2rem;
-            }
-            .discover{
-                font-size: 1.5rem;
-            }
-        }
-        main{
-            flex-direction: row;
-            gap: 5em;
         }
     }
     .about{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 5em 5em;
+        padding: 10em 2em;
+        height: 100vh;
+        flex-direction: row;
         .abt-details{
-            padding-bottom: 5em;
-            align-items: flex-start;
-            .sub-heading{
-                align-self: flex-start;
-            }
-            justify-content: flex-start;
-            p{
-                text-align: left;
-                font-size: 1.2rem;
-            }
-            .sub-cnt{
-                font-size: 1rem;
-            }
-            .submit-btn{
-                margin-top: 4em;
-                .main{
-                    font-size: 1.5rem;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            height: 100%;
+            gap: 0;
+            .col1{
+                .sub-heading{
+                    font-size: 3rem;
                 }
-                .sub{
-                    font-size: 1.2rem;
+                flex: 1;
+                width: 100%;
+                height: 100%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 4em;
+                .main-cnt{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    text-align: left;
                 }
+            }
+            .col2{
+                flex: 1;
+                .sub-cnt{
+                    font-size: 1.3rem;
+                }
+                .loc{
+                    p{
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .speaker{
+                height: 500px;
             }
         }
     }
+    // .social{
+    //     flex-direction: column;
+    //     padding: 0;
+    //     gap: 3em;
+    //     .headings{
+    //         p{
+    //             font-size: 1.2rem;
+    //         }
+    //         .discover{
+    //             font-size: 1.5rem;
+    //         }
+    //     }
+    //     main{
+    //         flex-direction: row;
+    //         gap: 5em;
+    //     }
+    // }
+
     .testimonials{
         padding: 8em 8em;
         .content-sec{
@@ -604,48 +659,70 @@ header{
             gap: 3em;
         }
     }
-    .social{
-        .headings{
-            p{
-                font-size: 1.5rem;
-            }
-            .discover{
-                font-size: 2rem;
-            }
-        }
-        main{
-            gap: 6em;
-            a{
-                font-size: 1.5rem;
-            }
-        }
-    }
     .about{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 5em 5em;
-        gap: 5em;
+        padding: 10em 5em;
+        height: 100vh;
+        flex-direction: row;
         .abt-details{
-            height: 600px;
-            padding: 5em 0;
-            justify-content: center;
-            .sub-heading{
-                align-self: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            height: 100%;
+            gap: 0;
+            .col1{
+                flex: 1;
+                width: 100%;
+                // height: 100%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3em;
+                .sub-heading{
+                    font-size: 4rem;
+                }
+                .main-cnt{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    text-align: left;
+                }
             }
-            justify-content: flex-start;
-            p{
-                text-align: left;
-                font-size: 1.4rem;
+            .col2{
+                flex: 1;
+                height: 100%;
+                .sub-cnt{
+                    font-size: 1.5rem;
+                }
+                .loc{
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
             }
-            .sub-cnt{
-                font-size: 1.3rem;
+            .speaker{
+                height: 600px;
             }
-        }
-        .speaker{
-            height: 600px;
         }
     }
+    // .social{
+    //     .headings{
+    //         p{
+    //             font-size: 1.5rem;
+    //         }
+    //         .discover{
+    //             font-size: 2rem;
+    //         }
+    //     }
+    //     main{
+    //         gap: 6em;
+    //         a{
+    //             font-size: 1.5rem;
+    //         }
+    //     }
+    // }
+
 }
 
 @media only screen and (min-width: 1440px){
@@ -661,6 +738,13 @@ header{
                     border: none;
                     padding: 0;
                 }
+            }
+        }
+    }
+    .about{
+        .abt-details{
+            .speaker{
+                height: 700px;
             }
         }
     }
