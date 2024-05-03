@@ -203,28 +203,27 @@ header{
     position: relative;
     main{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        flex-direction: column-reverse;
-        // height: 100vh;
+        flex-direction: column;
         width: 100%;
-        padding: 3em 0;
-        padding-top: 4em;
+        padding: 5em 0;
+        padding-top: 5em;
         gap: 3em;
-        .headings{
-            .title{
-                font-size: 4rem;
-                color: $green;
-                text-align: center;
-                font-weight: 700;
-            }
-            .sub-title{
-                font-size: 2rem;
-                font-weight: 600;
-                text-align: center;
-                color: white;
-            }
-        }
+        // .headings{
+        //     .title{
+        //         font-size: 4rem;
+        //         color: $green;
+        //         text-align: center;
+        //         font-weight: 700;
+        //     }
+        //     .sub-title{
+        //         font-size: 2rem;
+        //         font-weight: 600;
+        //         text-align: center;
+        //         color: white;
+        //     }
+        // }
 
         .swiper {
             width: 100%;
@@ -246,6 +245,11 @@ header{
                     height: auto;
                     object-fit: cover;
                 }
+                video{
+                    width: 100%;
+                    // height: 500px;
+                    // background-color: $bg-color;
+                }
             }
         }
         p{
@@ -260,10 +264,10 @@ header{
 .social{
     background: none;
     display: flex;
-    flex-direction:  column;
+    flex-direction:  row;
     align-items: center;
     justify-content: flex-start;
-    gap: 2em;
+    gap: 1em;
     a{
         color: white;
         text-decoration: none;
@@ -271,17 +275,17 @@ header{
         justify-content: center;
         align-items: center;
         gap: 1.5em;
-        border: 2px solid #ec4a62;
+        // border: 2px solid #ec4a62;
         padding: 5px 15px;
         border-radius: 100px;
 
         svg{
-            width: 35px;
+            width: 40px;
             height: auto;
         }
     }
     .facebook{
-        border: 2px solid #1877f2;
+        // border: 2px solid #1877f2;
     }
 }
 
@@ -527,7 +531,17 @@ header{
                 font-size: 1.2rem;
             }
             .social{
-                flex-direction: row-reverse;
+                flex-direction: column;
+                position: absolute;
+                right: 2em;
+                bottom: 50%;
+                gap: 5em;
+                transform: translateY(50%);
+                a{
+                    svg{
+                        width: 50px;
+                    }
+                }
             }
         }
     }
