@@ -330,6 +330,14 @@ header nav ul li a:hover {
   font-size: 1.3rem;
   font-weight: 600;
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.about .abt-details .col2 .loc p svg {
+  height: 30px;
+  width: auto;
 }
 .about .abt-details .speaker {
   width: auto;
