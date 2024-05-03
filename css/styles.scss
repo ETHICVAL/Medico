@@ -207,6 +207,7 @@ header{
         // height: 100vh;
         width: 100%;
         padding: 10em 0;
+        padding-top: 5em;
         gap: 3em;
         .headings{
             .title{
@@ -256,43 +257,29 @@ header{
 
 .social{
     background: none;
-    background-color: black;
     display: flex;
-    flex-direction: column;
+    flex-direction:  column;
     align-items: center;
-    justify-content: center;
-    gap: 3em;
-    padding: 5em 0;
-    .headings{
-        padding: 1em 2em;
-        p{
-            color: white;
-            text-align: center;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        .discover{
-            font-size: 1.2rem;
-            font-weight: 700;
-            padding-bottom: 1em;
-        }
-    }
-    main{
+    justify-content: flex-start;
+    gap: 2em;
+    a{
+        color: white;
+        text-decoration: none;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2em;
-        a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            gap: 1em;
-            font-size: 1.2rem;
-            font-weight: 800;
+        gap: 1.5em;
+        border: 2px solid #ec4a62;
+        padding: 5px 15px;
+        border-radius: 100px;
+
+        svg{
+            width: 35px;
+            height: auto;
         }
+    }
+    .facebook{
+        border: 2px solid #1877f2;
     }
 }
 
