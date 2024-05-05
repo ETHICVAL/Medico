@@ -75,7 +75,7 @@ footer main .footer-contents .column .social-media-icons {
   gap: 1em;
   align-self: center;
 }
-footer main .footer-contents .column .ad {
+footer main .footer-contents .column .add {
   flex-direction: column;
   border-bottom: 1px solid white;
   padding: 1em 0em;
@@ -653,7 +653,7 @@ header nav ul li a:hover {
     align-items: flex-start;
     gap: 1.5em;
   }
-  footer main .footer-contents .address .addresses .ad {
+  footer main .footer-contents .address .addresses .add {
     border: none;
     padding: 0;
   }
